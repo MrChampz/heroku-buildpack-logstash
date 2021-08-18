@@ -8,7 +8,7 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 
-INIT_SCRIPT="$BUILD_DIR/.profile.d/logstash.sh"
+INIT_SCRIPT="/.profile.d/logstash.sh"
 
 if [ -f "$ENV_DIR/DOWNLOAD_URL" ]; then
   DOWNLOAD_URL=$(cat $ENV_DIR/DOWNLOAD_URL)
