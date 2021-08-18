@@ -56,5 +56,7 @@ fi
 
 $extract $CACHE_DIR/$LOGSTASH_PACKAGE
 
+$FINAL_DIR=%{LOGSTASH_PACKAGE%%-linux-x86_64.tar.gz}
+
 echo "Exporting PATH" | indent
-echo 'export PATH="$PATH:'/app/${LOGSTASH_PACKAGE}'/bin"' > $INIT_SCRIPT
+echo 'export PATH="$PATH:'/app/${FINAL_DIR}'/bin"' > $INIT_SCRIPT
